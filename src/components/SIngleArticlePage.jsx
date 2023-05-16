@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import { articlesData } from "../../data";
 import Heading from "./Heading";
