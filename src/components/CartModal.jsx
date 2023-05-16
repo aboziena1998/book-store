@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { createPortal } from "react-dom";
-import { BiCloset, BiX } from "react-icons/bi";
+import { BiX } from "react-icons/bi";
 import { useCart } from "../contexts/CartProvider";
 import { formatToUSD } from "../utils/helper";
 
 const CartModal = ({ isOpen, setIsOpen }) => {
-  const { state, handleAdd, handleRemove, updateBooks } = useCart();
-
-  const [amount, setAmount] = useState(1);
+  const { state, handleRemove, updateBooks } = useCart();
 
   const handleUpdateCartItem = (e, id) => {
     updateBooks(id, +e.target.value);

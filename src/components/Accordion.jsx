@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import Heading from "./Heading";
+import { useEffect, useRef, useState } from "react";
 import { accordionData } from "../../data";
 import { BsChevronDown } from "react-icons/bs";
 import { useHandleOutsideClick } from "../hooks/useHandleOutsideClick";

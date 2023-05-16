@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useHandleOutsideClick = ref => {
   const [clicked, setClicked] = useState(false);
@@ -16,7 +16,7 @@ export const useHandleOutsideClick = ref => {
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
-  }, []);
+  }, [ref]);
 
   return clicked;
 };

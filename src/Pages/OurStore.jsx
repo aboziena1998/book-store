@@ -1,4 +1,3 @@
-import React from "react";
 import Heading from "../components/Heading";
 import { booksData } from "../../data";
 import { Link } from "react-router-dom";

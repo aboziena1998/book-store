@@ -1,5 +1,4 @@
-import React from "react";
-import { BsCCircle, BsCircleFill, BsTwitter } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import Logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { booksData } from "../../data";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { RxCube } from "react-icons/rx";
 import { BsLightningCharge } from "react-icons/bs";
@@ -23,7 +23,7 @@ const SingleBookPage = () => {
     id: ISBN,
   };
 
-  const { state, handleAdd, updateBooks } = useCart();
+  const { handleAdd } = useCart();
   const [activeButton, setActiveButton] = useState("button-1");
   const [amount, setAmount] = useState(1);
 
