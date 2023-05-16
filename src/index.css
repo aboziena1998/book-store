@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ff-primary: "Cardo", serif;
+  --ff-secondary: "Inter", sans-serif;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --fz-17: 1.0625rem; /*17px*/
+  --fz-19: 1.1875rem; /*19px*/
+  --fz-65: 3.5rem; /*65px*/
+  --fz-55: 3.4375rem; /*55px*/
+  --fz-45: 2.8125rem; /*45px*/
+  --fz-32: 2rem; /*32px*/
+  --fz-28: 1.75rem; /*28px*/
+  --fz-24: 1.5rem; /*24px*/
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--ff-primary);
+  line-height: 1.2;
+}
+
+.h1 {
+  font-size: var(--fz-65);
+  font-weight: var(--fw-700);
+}
+.h2 {
+  font-size: var(--fz-55);
+}
+.h3 {
+  font-size: var(--fz-45);
+}
+.h4 {
+  font-size: var(--fz-32);
+}
+.h5 {
+  font-size: var(--fz-28);
+}
+.h6 {
+  font-size: var(--fz-24);
+}
+
+/* Reset  */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 19px;
+  @apply text-primary;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  @apply font-inter text-[16px];
+}
+.App {
+  width: 100%;
+  padding-inline: 2rem;
+}
+.logo {
+  width: 8rem;
+  margin-right: 2rem;
+}
+
+a,
+a:link {
+  cursor: pointer;
+}
+a:focus-visible {
+  outline: 3px solid #ffca42;
+  border-radius: 0.3rem;
+  outline-offset: 4px;
+}
+@layer base {
+  .banner {
+    @apply pb-16  text-center  bg-primary mt-[-10px];
+  }
+  .wrapper {
+    @apply w-full max-w-[1600px] px-[4vw] 2xl:px-[5vw]  mx-auto;
+    /* padding-inline: 9vw; */
+    padding-block-start: 3rem;
+    padding-block-end: 5rem;
+  }
+}
+@layer components {
+  .social-link {
+    @apply bg-white p-3 text-primary hover:bg-secondary transition;
+  }
+  .nav-link {
+    @apply text-white hover:text-secondary py-6 text-sm font-[500];
+  }
+  .btn {
+    @apply text-base py-4 transition text-center px-6 lg:px-8 xl:px-12 capitalize;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-700);
+    border: 2px solid rgb(255 202 66 / 1);
+  }
+  .btn.big {
+    @apply px-12 md:px-14 lg:px-16 py-4;
+  }
+
+  .drop-down:hover .menu {
+    opacity: 1;
+  }
+  .menu {
+    @apply absolute px-3 py-7 w-[200px] bg-white text-primary top-[100%] rounded-md flex flex-col font-medium gap-2 opacity-0 z-50 transition-opacity;
+  }
+  .blockqoute {
+    @apply bg-primary w-full px-[3rem] py-12 md:py-16  rounded-md text-white text-base  mb-20;
+    background-image: url("./assets/blockqoute.svg");
+    background-repeat: no-repeat;
+    background-position: 1rem 0;
+    font-weight: var(--fw-500);
+  }
+  .blockqoute::before {
+    content: "“ ";
+  }
+  .blockqoute::after {
+    content: "”";
+  }
+  .checkbox {
+    @apply relative p-3  block outline outline-1 outline-blue-300 rounded-md;
+    transition: all 0.1s linear;
+  }
+
+  .checkbox:has(input[type="checkbox"]:checked) {
+    @apply bg-secondary z-10;
+  }
+  .checkbox:has(input[type="checkbox"]:focus) {
+    box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 4px rgb(227, 255, 124);
+  }
+
+  .check-mark {
+    @apply absolute text-white pointer-events-none top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 opacity-0;
+
+    transition: opacity 0.1s 0.1s linear;
+  }
+  .checkbox:has(input[type="checkbox"]:checked) > .check-mark {
+    @apply opacity-[1];
+  }
+  .framed-image {
+    @apply relative lg:border-0 border-solid border-secondary border-[5px] before:absolute before:bg-transparent before:border-solid before:border-[10px] before:border-secondary before:w-[100%] before:h-[100%] z-[1] before:-z-[1] before:lg:top-[3%] before:lg:left-[5%];
+  }
+
+  .closed-dropdown {
+    transform: scaleY(0);
+  }
+
+  .overlay {
+    @apply fixed w-full h-full bg-black opacity-0 top-0 right-0 z-10;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .overlay.open {
+    pointer-events: all;
+    opacity: 0.5;
+  }
+  .cart {
+    @apply fixed w-[calc(100%-4vw)] h-1/2 max-h-full overflow-y-auto sm:w-[500px] sm:h-auto  top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2 origin-center opacity-0 scale-90 bg-white z-[20] flex flex-col items-center justify-center;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    /* transform: translateZ(-100px); */
+  }
+  .cart.open {
+    @apply -translate-x-1/2 -translate-y-1/2 opacity-[1] scale-[1] py-0 flex flex-col justify-start gap-6 h-auto pb-3;
+    pointer-events: all;
+    /* transform: translateZ(100px); */
+  }
+  .cart.open.empty {
+    @apply sm:h-[300px];
+  }
+  .heading {
+    @apply relative   font-bold;
+    text-align: center;
+  }
+  .count-icon {
+    @apply w-[65px] aspect-square flex-shrink-0  bg-secondary text-primary flex items-center justify-center  text-center  relative before:absolute before:border-[1px] before:border-dashed before:border-primary before:h-full before:left-1/2 before:top-full before:hidden sm:before:block;
+  }
+
+  .form-input {
+    @apply text-lg text-gray-500 p-4 pl-14 relative w-full  outline outline-gray-300 outline-1 focus-visible:outline-secondary placeholder:font-normal;
+  }
+
+  .accordion {
+    @apply w-full lg:max-w-[70%];
+    display: flex;
+    flex-direction: column;
+  }
+  .accordion-item {
+    @apply border-solid border-0 border-b-2;
+    width: 100%;
+    padding-inline-end: 2rem;
+    /* padding-block: 1rem; */
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .accordion-item-button {
+    /* padding: 0.2rem; */
+    border-radius: 50%;
+  }
+  :is(.accordion-item, .accordion-item-button):focus-visible {
+    @apply outline-secondary outline outline-offset-1;
+  }
+
+  .accordion-item-label {
+    @apply font-cardo text-[24px];
+    display: block;
+    font-family: var(--ff-primary);
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .accordion-label-container {
+    @apply flex items-center justify-between;
+  }
+  .accordion-label-container > * {
+    transition: all 0.5s ease;
+  }
+  .accordion-item-content {
+    @apply pl-6 text-gray-400 text-lg;
+    display: grid;
+    transition: grid-template-rows 0.3s ease-in-out;
+    grid-template-rows: 0fr;
+    /* padding-block: 0.4rem; */
+  }
+  .accordion-item-content > p {
+    overflow: hidden;
+  }
+  .accordion-item-content.open {
+    grid-template-rows: 1fr;
+  }
+}
