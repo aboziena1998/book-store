@@ -28,7 +28,11 @@ const OurStore = () => {
                     key={version.title}
                   >
                     <div className="p-8 bg-neutral">
-                      <img src={version.image} alt={item.description} />
+                      <img
+                        src={version.image}
+                        alt={item.description}
+                        loading="lazy"
+                      />
                     </div>
                     <h3 className="font-cardo font-bold text-lg sm:text-xl lg:text-2xl xl:text-2xl text-primary">
                       {version.title}

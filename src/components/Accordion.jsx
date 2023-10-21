@@ -16,11 +16,14 @@ const Accordion = () => {
     setSelectedIndex(index);
   };
 
-  const clicked = useHandleOutsideClick(accordionRef);
+  const { clicked, setClicked } = useHandleOutsideClick(accordionRef);
 
   useEffect(() => {
-    if (clicked) setSelectedIndex(null);
-  }, [clicked]);
+    if (clicked) {
+      setSelectedIndex(null);
+      setClicked(false);
+    }
+  }, [clicked, setClicked]);
 
   return (
     <div

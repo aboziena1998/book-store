@@ -17,7 +17,6 @@ import Article3 from "./src/assets/article3.jpg";
 import Article4 from "./src/assets/article4.jpg";
 import Article5 from "./src/assets/article5.jpg";
 import Article6 from "./src/assets/article6.jpg";
-import { BsCircle, BsCircleFill, BsCircleHalf } from "react-icons/bs";
 
 export const booksData = [
   {

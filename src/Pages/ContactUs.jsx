@@ -1,6 +1,5 @@
 import Heading from "../components/Heading";
 import { FiHome, FiPhoneCall } from "react-icons/fi";
-import {} from "react-icons/ci";
 import { SlEnvolope } from "react-icons/sl";
 import Form from "../components/Form";
 import Accordion from "../components/Accordion";

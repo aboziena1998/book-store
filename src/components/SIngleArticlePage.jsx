@@ -20,7 +20,12 @@ const SIngleArticlePage = () => {
       <article>
         <div className="wrapper">
           <div className="object-cover overflow-hidden rounded-md shadow-lg">
-            <img src={article.image} className="w-full " alt="" />
+            <img
+              src={article.image}
+              className="w-full "
+              alt=""
+              loading="lazy"
+            />
           </div>
           <h4 className="font-bold font-cardo text-base my-6">
             October 6, 2021 / Classics

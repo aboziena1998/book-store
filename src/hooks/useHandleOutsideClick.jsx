@@ -18,5 +18,5 @@ export const useHandleOutsideClick = ref => {
     };
   }, [ref]);
 
-  return clicked;
+  return { clicked, setClicked };
 };

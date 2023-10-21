@@ -27,7 +27,7 @@ const CartModal = ({ isOpen, setIsOpen }) => {
       >
         <div className="flex gap-2 flex-shrink-0">
           <div className="p-2 w-[90px] h-[110px]">
-            <img src={book.image} alt="" className="" />
+            <img src={book.image} alt="" className="" loading="lazy" />
           </div>
           <div>
             <p className="font-bold text-black text-lg object-cover ">

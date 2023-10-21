@@ -9,7 +9,12 @@ const ArticlePreviewCard = ({ item }) => {
       className=" overflow-hidden rounded-md text-primary  shadow-lg flex flex-col gap-4 bg-white "
     >
       <div className="flex-grow-0 ">
-        <img src={image} alt="" className="object-cover w-full" />
+        <img
+          src={image}
+          loading="lazy"
+          alt=""
+          className="object-cover w-full"
+        />
       </div>
       <div className="flex flex-col justify-between h-full p-4 gap-2 lg:gap-3 flex-grow-0  ">
         <h4 className="text-[24px] font-cardo font-bold">{title}</h4>

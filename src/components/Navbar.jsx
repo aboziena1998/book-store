@@ -12,7 +12,7 @@ const Navbar = ({ toggleModal, setToggleModal }) => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuRef = useRef(null);
 
-  const clicked = useHandleOutsideClick(menuRef, openMenu);
+  const { clicked, setClicked } = useHandleOutsideClick(menuRef);
   const { state } = useCart();
 
   const amount = state.books.reduce((acc, item) => {
@@ -20,7 +20,10 @@ const Navbar = ({ toggleModal, setToggleModal }) => {
   }, 0);
 
   useEffect(() => {
-    if (clicked) setOpenMenu(false);
+    if (clicked) {
+      setOpenMenu(false);
+      setClicked(false);
+    }
   }, [clicked]);
 
   return (
@@ -29,7 +32,6 @@ const Navbar = ({ toggleModal, setToggleModal }) => {
      justify-between gap-6
       text-white text-base xl:text-lg
        lg:w-auto w-full  relative z-[1]"
-      ref={menuRef}
     >
       {matches && (
         <div className="flex gap-8  items-center">

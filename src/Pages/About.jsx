@@ -27,7 +27,12 @@ const About = () => {
       <section className="bg-neutral">
         <div className="wrapper">
           <div className="w-full shadow-xl">
-            <img src={AuthorImage2} alt="Author" className="w-full " />
+            <img
+              src={AuthorImage2}
+              alt="Author"
+              className="w-full "
+              loading="lazy"
+            />
           </div>
           <div
             className={`flex flex-col gap-16 xl:flex-row  mt-10 lg:w-[60%] xl:w-full`}
@@ -217,7 +222,7 @@ const About = () => {
               </div>
             </div>
             <div className="shrink-0 shadow-xl self-center lg:self-start">
-              <img src={AuthorImage3} alt="" />
+              <img src={AuthorImage3} alt="" loading="lazy" />
             </div>
           </div>
         </div>
@@ -245,6 +250,7 @@ const About = () => {
                   <img
                     src={book.version.image}
                     className="xl:w-[50%] drop-shadow-xl"
+                    loading="lazy"
                   />
                   <div className="flex flex-col gap-2 items-start justify-between  ">
                     <h3 className="text-[1.7rem] font-cardo font-[600] text-primary ">
@@ -300,6 +306,7 @@ const About = () => {
                   src={item.image}
                   alt={item.title}
                   className=" h-[100px] object-contain"
+                  loading="lazy"
                 />
                 <h3 className="h6 font-[600]">{item.title}</h3>
                 <p className="text-gray-400 text-lg">{item.description}</p>

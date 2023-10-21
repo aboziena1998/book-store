@@ -82,7 +82,12 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <img src={HeroImg} alt="" className="w-full md:w-auto" />
+          <img
+            loading="lazy"
+            src={HeroImg}
+            alt=""
+            className="w-full md:w-auto"
+          />
         </div>
       </section>
 
@@ -107,6 +112,7 @@ const Home = () => {
                     key={book.version.title}
                   >
                     <img
+                      loading="lazy"
                       src={book.version.image}
                       className="xl:w-[50%] drop-shadow-xl"
                     />
@@ -138,7 +144,7 @@ const Home = () => {
       <section className="bg-neutral py-14 font-inter ">
         <div className="wrapper flex flex-col xl:flex-row  gap-14 xl:gap-32">
           <div className="framed-image ">
-            <img src={Author} alt="" className="w-full h-full" />
+            <img loading="lazy" src={Author} alt="" className="w-full h-full" />
           </div>
           <div className=" xl:basis-[50%] flex flex-col items-start justify-between ">
             <Heading
@@ -181,7 +187,12 @@ const Home = () => {
               </div>
             </div>
             <div className="w-full lg:w-fit flex flex-col md:flex-row gap-4 xl:gap-10   p-4 bg-primary  items-start sm:items-center ">
-              <img src={QRCode} alt="" className="flex-shrink-1" />
+              <img
+                loading="lazy"
+                src={QRCode}
+                alt=""
+                className="flex-shrink-1"
+              />
               <div className="flex flex-col justify-between   ">
                 <p className="text-base font-cardo   text-secondary font-[600]">
                   John Abraham , Ph.d
@@ -209,6 +220,7 @@ const Home = () => {
                 className="basis-1/4 flex flex-col px-4 gap-7 items-center text-center lg:basis-1/2 xl:basis-1/4 lg:mb-10 "
               >
                 <img
+                  loading="lazy"
                   src={item.image}
                   alt={item.title}
                   className=" h-[100px] object-contain"
@@ -240,7 +252,12 @@ const Home = () => {
                 Order Today
               </button>
             </div>
-            <img src={CoffeeImage} alt="" className="lg:w-[40%]" />
+            <img
+              loading="lazy"
+              src={CoffeeImage}
+              alt=""
+              className="lg:w-[40%]"
+            />
           </div>
         </div>
       </section>
@@ -288,7 +305,12 @@ const Home = () => {
               </div>
             </div>
             <div className="framed-image lg:order-1 xl:order-2 lg:mb-7  shadow-xl">
-              <img src={ReadingWoman} alt="" className="w-full h-full" />
+              <img
+                loading="lazy"
+                src={ReadingWoman}
+                alt=""
+                className="w-full h-full"
+              />
             </div>
           </div>
         </div>
@@ -377,7 +399,12 @@ const Home = () => {
               {/* client 1 */}
               <div className="bg-primary text-white p-6 flex flex-col gap-3 items-start ">
                 <div className="flex flex-col md:flex-row items-start gap-5 lg:items-center">
-                  <img src={Client1} alt="Client" className="rounded-full" />
+                  <img
+                    loading="lazy"
+                    src={Client1}
+                    alt="Client"
+                    className="rounded-full"
+                  />
                   <h4 className="text-xl font-bold font-cardo capitalize ">
                     <span className="mb-3 inline-block">James Williams</span>{" "}
                     <br className="" />
@@ -395,7 +422,12 @@ const Home = () => {
               {/* client 2 */}
               <div className="bg-primary text-white p-6 flex flex-col gap-3 items-start xl:h-fit">
                 <div className="flex flex-col md:flex-row items-start gap-5 lg:items-center">
-                  <img src={Client2} alt="Client" className="rounded-full" />
+                  <img
+                    loading="lazy"
+                    src={Client2}
+                    alt="Client"
+                    className="rounded-full"
+                  />
                   <h4 className="text-xl font-bold font-cardo capitalize ">
                     <span className="mb-3 inline-block">Chris Adams</span>{" "}
                     <br className="" />
@@ -413,7 +445,12 @@ const Home = () => {
               {/* client 3 */}
               <div className="bg-primary text-white p-6 flex flex-col gap-3 items-start  xl:self-end xl:translate-y-32">
                 <div className="flex flex-col md:flex-row items-start gap-5 lg:items-center">
-                  <img src={Client3} alt="Client" className="rounded-full" />
+                  <img
+                    loading="lazy"
+                    src={Client3}
+                    alt="Client"
+                    className="rounded-full"
+                  />
                   <h4 className="text-xl font-bold font-cardo capitalize ">
                     <span className="mb-3 inline-block">Angeline Flora</span>{" "}
                     <br className="" />

@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 border-0 border-b-[1px] border-gray-500 border-solid  py-10">
           <div>
             <div className="mb-4">
-              <img src={Logo} alt="" />
+              <img src={Logo} alt="" loading="lazy" />
             </div>
             <div className="flex gap-2">
               <a

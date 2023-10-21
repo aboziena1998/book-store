@@ -1,7 +1,6 @@
 import { FiUser, FiEdit } from "react-icons/fi";
 import { RxEnvelopeClosed } from "react-icons/rx";
 import { BsCheck, BsTelephone } from "react-icons/bs";
-import Button from "./Button";
 
 const Form = () => {
   return (
@@ -12,6 +11,7 @@ const Form = () => {
           className="absolute h-full left-4 text-secondary"
         />
         <input
+          required
           type="text"
           name="Name"
           id="name"
@@ -25,6 +25,7 @@ const Form = () => {
           className="absolute h-full left-4 text-secondary"
         />
         <input
+          required
           type="email"
           name="Email"
           id="email"
@@ -38,6 +39,7 @@ const Form = () => {
           className="absolute h-full left-4 text-secondary"
         />
         <input
+          required
           type="tel"
           name="Phone"
           id="phone"
@@ -62,6 +64,7 @@ const Form = () => {
       <div className="flex items-center justify-start gap-3 col-span-2">
         <label htmlFor="notifyMe" className="checkbox">
           <input
+            required
             type="checkbox"
             id="notifyMe"
             className="p-2 inline-block w-full h-full cursor-pointer absolute top-0 left-0 appearance-none"
