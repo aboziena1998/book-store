@@ -1,28 +1,23 @@
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Articles from "./Pages/Articles";
-import OurStore from "./Pages/OurStore";
-import StyleGuide from "./Pages/StyleGuide";
-import ContactUs from "./Pages/ContactUs";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  ScrollRestoration,
-} from "react-router-dom";
-import MainLayout from "./Layouts/mainLayout";
-import CartModal from "./components/CartModal";
-import { useState } from "react";
-import SingleBookPage from "./Pages/SingleBookPage";
-import ScrollToTop from "./components/ScrollToTop";
-import SIngleArticlePage from "./components/SIngleArticlePage";
-import CartProvider from "./contexts/CartProvider";
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Articles from './Pages/Articles';
+import OurStore from './Pages/OurStore';
+import StyleGuide from './Pages/StyleGuide';
+import ContactUs from './Pages/ContactUs';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import CartModal from './components/CartModal';
+import { useState } from 'react';
+import SingleBookPage from './Pages/SingleBookPage';
+import SIngleArticlePage from './components/SIngleArticlePage';
+import CartProvider from './contexts/CartProvider';
+import MainLayout from './Layouts/MainLayout';
 
 function App() {
   const [toggleModal, setToggleModal] = useState(false);
 
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: '/',
       element: (
         <MainLayout toggleModal={toggleModal} setToggleModal={setToggleModal} />
       ),
@@ -32,31 +27,31 @@ function App() {
           element: <Home />,
         },
         {
-          path: "about",
+          path: 'about',
           element: <About />,
         },
         {
-          path: "articles",
+          path: 'articles',
           element: <Articles />,
         },
         {
-          path: "articles/:articleId",
+          path: 'articles/:articleId',
           element: <SIngleArticlePage />,
         },
         {
-          path: "ourstore",
+          path: 'ourstore',
           element: <OurStore />,
         },
         {
-          path: "styleguide",
+          path: 'styleguide',
           element: <StyleGuide />,
         },
         {
-          path: "contactus",
+          path: 'contactus',
           element: <ContactUs />,
         },
         {
-          path: "books/:id",
+          path: 'books/:id',
           element: <SingleBookPage />,
         },
       ],
